@@ -21,7 +21,7 @@ class Delivr extends StatelessWidget {
         pageTransitionType: PageTransitionType.fade,
         backgroundColor: Colors.transparent,
         splashIconSize: 1000,
-        nextScreen: GetStartedScreen(),
+        nextScreen: const GetStartedScreen(),
       ),
       debugShowCheckedModeBanner: false,
     );
@@ -29,6 +29,8 @@ class Delivr extends StatelessWidget {
 }
 
 class GetStartedScreen extends StatelessWidget {
+  const GetStartedScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +55,8 @@ class GetStartedScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: const Color.fromARGB(255, 251, 176, 2),
-                  onPrimary: const Color.fromARGB(255, 0, 0, 0),
+                  foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                  backgroundColor: const Color.fromARGB(255, 251, 176, 2),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 120, vertical: 18),
                   shape: RoundedRectangleBorder(
